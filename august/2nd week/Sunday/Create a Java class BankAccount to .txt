@@ -1,0 +1,8 @@
+Create a Java class BankAccount to represent a simple bank account. The class should have private attributes accountNumber, balance, and ownerName. Implement methods to deposit money, withdraw money, and display the account details.
+
+Constraints:
+
+The balance attribute should not go below zero during withdrawals.
+The accountNumber should be a unique identifier for each account.
+The ownerName should not be empty or null.
+Bonus Challenge: Implement a  method in the BankAccount class to generate a random 6-digit account number for new accounts.
