@@ -1,0 +1,73 @@
+# Dictionaries in python (key(name, age, profession) and value(Sanjoy, 41, teacher)     pairs )
+
+####A list created with dictionaries
+
+users = [
+    {
+      "Name":"Sanjoy",
+      "Age":30,
+      "Profession":"Teaching",
+      "skill":"FSD / Devoops",
+      "Address":{"city":"kolkata",
+                "state":"west-benga",
+                "pin":140,
+                "line1":"somedata"
+                },
+    },
+
+{
+      "Name":"Anek",
+      "Age":30,
+      "Profession":"Teaching",
+      "skill":"FSD / Devoops",
+      "Address":{"city":"kolkata",
+                "state":"west-benga",
+                "pin":140,
+                "line1":"somedata"
+                },
+}
+]
+
+
+print(users[1]["name"])
+users[1]["hobby"] = "football"
+
+
+print(users[1]["Name"])
+print(users[1]["Age"])
+print(users[1]["Address"]["city"])
+print(users)
+
+userNames = ["sanjoy","vaibhav","Ayush"]
+userNames[1] = "Faisal"
+print(userNames)
+
+
+
+
+############## Assignment   (input the student details==== name and marks === and create output using list of dictionaries)
+
+
+
+students = []
+num_students = int(input("Enter the number of students"))
+
+for i in range(num_students):
+    print("Enter the student details",(i+1),":")
+    student = {}
+    student['name'] = input("Enter the student name")
+    student['marks'] = int(input("Enter the marks"))
+
+    students.append(student)
+
+print("Summary of all the students")
+
+for i in range(num_students):
+    student = students[i]
+    print("Student", (i+1))
+    print("name is :- ",(student['name']))
+    print("Mark is :-",(student['marks']))
+
+print(students)
+
+#################===============================##########################============######
