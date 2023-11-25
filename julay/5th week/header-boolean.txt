@@ -1,0 +1,8 @@
+boolean isHeaderWritten = false;
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true))) {
+         
+            if (!isHeaderWritten) {
+                writer.write("Name, Age, Salary");
+                writer.newLine();
+                isHeaderWritten = true;
+            }
