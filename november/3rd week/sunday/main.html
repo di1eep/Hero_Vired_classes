@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        /* Optional: Add some styles for better presentation */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>To Do List</h2>
+    <input placeholder="To Do Name" class="name-input" type="text">
+    <button id="button">Add</button>
+    
+    <!-- To-Do List Container -->
+    <div class="showInput">
+        <!-- Display the to-do list here -->
+    </div>
+
+    <script>
+        const toDoList = [];
+        const addButton = document.getElementById("button");
+        const input = document.querySelector(".name-input");
+        const inputValue = document.querySelector(".showInput");
+
+        addButton.addEventListener("click", function() {
+            let name = input.value;
+            toDoList.push(name);
+            input.value = "";
+
+            // Display the updated to-do list
+            updateToDoList();
+        });
+
+        function updateToDoList() {
+            let todoListHTML = '';
+            for (let i = 0; i < toDoList.length; i++) {
+                const todo = toDoList[i];
+                todoListHTML += `
+                <div>
+                    <p class="todo-item">${todo}</p>
+                    <input type="checkbox" id="deleteCheckbox${i}" class="delete-checkbox">
+                    <label for="deleteCheckbox${i}">FINISHED</label>
+                </div>`;
+            }
+            inputValue.innerHTML = todoListHTML;
+
+            // Add event listeners to newly created checkboxes
+            const deleteCheckboxes = document.querySelectorAll('.delete-checkbox');
+            deleteCheckboxes.forEach((checkbox, index) => {
+               
+                checkbox.addEventListener('change', function () {
+                    const todoItem = document.querySelectorAll('.todo-item')[index];
+                    // Toggle the 'strikethrough' style
+                    todoItem.style.textDecoration = this.checked ? 'line-through' : 'none';
+                });
+            });
+        }
+    </script>
+
+</body>
+</html>

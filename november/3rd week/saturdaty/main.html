@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<div id="happy" class="happy"><ul>
+    <li id="hapy"></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</div>
+
+
+
+
+</head>
+<body>
+    
+<script>
+
+document.getElementsByClassName // returns thew value in array   in html format
+
+
+document.getElementsByTagName // returns the value in array  == we use tag names like p , li, ul, div
+
+
+const happy = document.getElementById('hapy');
+console.log(happy);                               // we are directly getting HTML
+
+// =========================================================
+
+// queryselectors  and queryselectorall
+
+let divwithid = document.querySelector('#sample');
+console.log(divwidthid);
+
+let divwithclass = document.querySelector('sample');
+console.log(divwithclass);
+
+let Allidivs = document.querySelectorAll('div');
+console.log(Alldivs);                              /// nodelists
+
+
+// difference between  node lists and html collections 
+// node lists consists of spaces , tabs , enters ,   nodes are like br tags, nbsp tags
+// html collections are like html you know
+
+
+// Events types  : onclick, onChange , onLoad, scroll, keypress, submit, onmouse over, onmouse Enter
+
+
+// addEventListners("event type ", function )
+
+// click event
+
+let mydiv = document.querySelector(".sample");
+mydiv.addEventListener('click', function(){
+    alert('your div has been changed')
+})
+
+
+// togle 
+
+let mydiv1 = document.querySelector(".sample");
+mydiv.addEventListener('click', function(){
+
+})
+
+/// text changing inside of a tag
+
+// on inner text = 
+
+/// inner html we can add html attributes 
+
+
+
+</script>
+
+</body>
+</html>

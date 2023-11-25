@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="sample">
+        <p id="">script</p>
+    </div>
+
+
+<div id="boxshadow" style="height: 200px; width: 200px; border: 2px solid black;">
+
+<p>sfgsdfgh</p>
+<p>fghfsgbh</p>
+<p>sdghsadfgh</p>
+<p>dfghsadgh</p>
+<p>rtghwrthrwth</p> 
+</div>
+
+<input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="female"> Female
+
+    <script>
+ // getElementbyId :element directly.
+    // getElementbyClassName
+    // const getdivs =document.getElementsByClassName('sample');
+    // console.log(getdivs);  htmlCollections []
+    
+    //getElementsbyTagName;
+    // const getdivs =document.getElementsByTagName('div');
+    // console.log(getdivs);  HTMLCollections []
+    
+    
+    //querySelectors and querSelectorALL.
+    
+    // let divwithId =document.querySelector('#sample');
+    // console.log(divwithId)
+    // let divwithClass =document.querySelector('.sample');
+    // console.log(divwithClass);
+    
+    // let Alldivs =document.querySelectorAll('div');
+    // console.log(Alldivs);  NodeLists[]
+    
+    // differnce btw NodeLists and HTMLCollections ? ********
+    
+    // Events : onclick, onChange, onLoad, scroll, keypress, submit ;
+    
+    //addEventListener('eventtype',function)
+    
+    // Click event
+
+
+
+    let mydiv = document.querySelector(".sample");
+    let innerDivValue = 0;
+    let newBtn = document.createElement('button');
+    newBtn.textContent = "increment counter" ;
+    newbtn.addEventListener('click',function(){
+        
+        innerDivValue++
+
+      })
+
+    mydiv.addEventListener('click', function () {
+        // alert("your div has been clicked")
+        // mydiv.style.color="red"
+        mydiv.style.height = "200px"
+        mydiv.style.width = "200px"
+
+        // on click sample1 text should be replaced with herovired
+        //    mydiv.innerText ="Herovired"
+        mydiv.innerHTML = `<div style='background-color: red;height: 50px;width: 50px;'>
+      ${innerDivValue}
+      </div>
+      
+      
+      <button id="btn">Increment</button>
+      `
+      const btn =document.getElementById('btn');
+      console.log(btn);
+      btn.addEventListener('click',function(){
+        
+        innerDivValue++
+
+      })
+
+      // we are 
+
+document.body.append(newBtn)
+
+    
+
+// mouse enter
+
+// mouse out
+
+
+
+
+    }) 
+    // btn should be outside of whole blue box ;
+
+
+ let hoverme = document.querySelector("#boxshadow");
+ hoverme.addEventListener('mouseenter', function(){
+    hoverme.style.backgroundcolor = "lightpink"
+ })
+
+ hoverme.addEventListener('mouseout', function(){
+    hoverme.style.backgroundcolor = "blue"
+ })
+
+
+    </script>
+    
+   
+
+
+
+
+
+</body>
+</html>

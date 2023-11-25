@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hover-div {
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .hover-div:hover {
+            background-color: green;
+            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="sample" style="background-color: lightblue;">sample1</div>
+    <div class="hover-div"></div>
+
+    <div class="subject-selection">
+        <p>Select any 4 subjects (out of 6):</p>
+        <input type="checkbox" id="math" name="subject" value="Math">
+        <label for="math">Math</label><br>
+        <input type="checkbox" id="science" name="subject" value="Science">
+        <label for="science">Science</label><br>
+        <input type="checkbox" id="history" name="subject" value="History">
+        <label for="history">History</label><br>
+        <input type="checkbox" id="english" name="subject" value="English">
+        <label for="english">English</label><br>
+        <input type="checkbox" id="art" name="subject" value="Art">
+        <label for="art">Art</label><br>
+        <input type="checkbox" id="music" name="subject" value="Music">
+        <label for="music">Music</label><br>
+    </div>
+
+    <div class="gender-selection">
+        <p>Select your gender:</p>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label><br>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>

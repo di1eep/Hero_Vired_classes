@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+  <script>
+
+console.log(" This is my first js");
+      var feedback1 = 5;
+      var feedback2 = 3;
+      var feedback3 = 4;
+      var feedback4 = 5;
+      var feedback5 = 2;
+
+
+      var shanmukam = 5;
+      var shivam = 5;
+      var maccha = 5;
+      var fasil = 5;
+      var ashfaq = 1;
+
+
+            const names = ["shanmukam", "shivam", "maccha", "fasil", "ashfaq"];
+            const feedbacks = [4, 5, 3, 2, 1];
+
+            for (let i = 0; i < 5; i++) {
+                console.log(names[i] + " has given feedback " + feedbacks[i]);
+            }
+
+            let feedbackSum = 0;
+
+            for (let i = 0; i < feedbacks.length; i++) {
+                feedbackSum += feedbacks[i];
+            }
+
+            let average = feedbackSum / feedbacks.length;
+
+            console.log(average);
+
+
+            if (average >= 4){
+                console.log("good feedback") 
+            }
+            else{
+                console.log("not so good reviews") 
+            }
+
+
+        function addition(a, b) {
+        result = a + b;
+        console.log(result);
+        }
+
+        function substraction(a, b) {
+        result = a - b;
+        console.log(result);
+        }
+
+
+        function multiplication(a, b) {
+        result = a * b;
+        console.log(result);
+        }
+
+        function division(a, b) {
+        result = a / b;
+        console.log(result);
+        }
+
+
+      
+      addition(5, 4);
+      function calculateAverage() {
+        sum = 0;
+        for (let i = 0; i < 5; i++) {
+          sum = sum + feedbacks[i];
+        }
+        average = sum / 5;
+        return average;
+      }
+      average = calculateAverage();
+      console.log(average);
+
+
+      const students = [
+  {
+    name: "sohail",
+    feedback: 4,
+  },
+  {
+    name: "sanjay",
+    feedback: 3,
+  },
+  {
+    name: "satendra",
+    feedback: 4,
+  },
+  {
+    name: "vaibhav",
+    feedback: 3,
+  },
+];
+
+for (let i = 0; i < students.length; i++) {
+  console.log(students[i].name + " student given " + students[i].feedback + " points");
+
+  if (students[i].feedback >= 3){
+    console.log(students[i].name + " student given goood feedback ")
+  }
+  else{
+    console.log(students[i].name + " student given bad feedback ")
+  }
+}
+
+
+
+
+
+  </script>
+
+</body>
+</html>
